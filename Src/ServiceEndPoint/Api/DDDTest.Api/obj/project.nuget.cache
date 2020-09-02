@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QI7dJ1OJaAjMaFnLPvE9R9lpIIBUvs1EeHP/U1SXqPmduVNVgdRZ6mmcE2NvLSnxVeED36icbdQmTS2YOo3ucQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\ServiceEndPoint\\Api\\DDDTest.Api\\DDDTest.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mahsa\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

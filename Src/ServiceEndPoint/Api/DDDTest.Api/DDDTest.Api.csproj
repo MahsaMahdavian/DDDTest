@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\DDDTest.Domain\DDDTest.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Core\DDDTest.Services\DDDTest.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

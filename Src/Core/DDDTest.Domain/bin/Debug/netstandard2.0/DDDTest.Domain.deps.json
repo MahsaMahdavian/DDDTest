@@ -7,13 +7,13 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "DDDTest.Services/1.0.0": {
+      "DDDTest.Domain/1.0.0": {
         "dependencies": {
-          "DDDTest.Domain": "1.0.0",
-          "NETStandard.Library": "2.0.3"
+          "NETStandard.Library": "2.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
-          "DDDTest.Services.dll": {}
+          "DDDTest.Domain.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -29,19 +29,11 @@
             "fileVersion": "4.6.26515.6"
           }
         }
-      },
-      "DDDTest.Domain/1.0.0": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.7.0"
-        },
-        "runtime": {
-          "DDDTest.Domain.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "DDDTest.Services/1.0.0": {
+    "DDDTest.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -66,11 +58,6 @@
       "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
       "path": "system.componentmodel.annotations/4.7.0",
       "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
-    },
-    "DDDTest.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

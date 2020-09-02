@@ -131,13 +131,13 @@
     },
     "DDDTest.Domain/1.0.0": {
       "type": "project",
-      "path": "../Src/Core/DDDTest.Domain/DDDTest.Domain.csproj",
-      "msbuildProject": "../Src/Core/DDDTest.Domain/DDDTest.Domain.csproj"
+      "path": "../../../Core/DDDTest.Domain/DDDTest.Domain.csproj",
+      "msbuildProject": "../../../Core/DDDTest.Domain/DDDTest.Domain.csproj"
     },
     "DDDTest.Services/1.0.0": {
       "type": "project",
-      "path": "../Src/Core/DDDTest.Services/DDDTest.Services.csproj",
-      "msbuildProject": "../Src/Core/DDDTest.Services/DDDTest.Services.csproj"
+      "path": "../../../Core/DDDTest.Services/DDDTest.Services.csproj",
+      "msbuildProject": "../../../Core/DDDTest.Services/DDDTest.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -153,11 +153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\DDDTest.Api\\DDDTest.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\ServiceEndPoint\\Api\\DDDTest.Api\\DDDTest.Api.csproj",
       "projectName": "DDDTest.Api",
-      "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\DDDTest.Api\\DDDTest.Api.csproj",
+      "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\ServiceEndPoint\\Api\\DDDTest.Api\\DDDTest.Api.csproj",
       "packagesPath": "C:\\Users\\Mahsa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\DDDTest.Api\\obj\\",
+      "outputPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\ServiceEndPoint\\Api\\DDDTest.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

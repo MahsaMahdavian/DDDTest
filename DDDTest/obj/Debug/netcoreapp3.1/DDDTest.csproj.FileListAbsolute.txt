@@ -9,7 +9,6 @@ C:\Users\Mahsa\source\repos\DDDTest\DDDTest\bin\Debug\netcoreapp3.1\DDDTest.dll
 C:\Users\Mahsa\source\repos\DDDTest\DDDTest\bin\Debug\netcoreapp3.1\DDDTest.pdb
 C:\Users\Mahsa\source\repos\DDDTest\DDDTest\bin\Debug\netcoreapp3.1\DDDTest.Views.dll
 C:\Users\Mahsa\source\repos\DDDTest\DDDTest\bin\Debug\netcoreapp3.1\DDDTest.Views.pdb
-C:\Users\Mahsa\source\repos\DDDTest\DDDTest\obj\Debug\netcoreapp3.1\DDDTest.csprojAssemblyReference.cache
 C:\Users\Mahsa\source\repos\DDDTest\DDDTest\obj\Debug\netcoreapp3.1\DDDTest.AssemblyInfoInputs.cache
 C:\Users\Mahsa\source\repos\DDDTest\DDDTest\obj\Debug\netcoreapp3.1\DDDTest.AssemblyInfo.cs
 C:\Users\Mahsa\source\repos\DDDTest\DDDTest\obj\Debug\netcoreapp3.1\DDDTest.csproj.CoreCompileInputs.cache
