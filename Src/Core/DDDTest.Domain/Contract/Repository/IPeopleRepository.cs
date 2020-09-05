@@ -5,7 +5,7 @@ using DDDTest.Domain.Person;
 
 namespace DDDTest.Domain.Contract.Repository
 {
-    public interface IPersonRepository:IBaseRepository<PersonModel>
+    public interface IPeopleRepository:IBaseRepository<PersonModel>
     {
     }
 }

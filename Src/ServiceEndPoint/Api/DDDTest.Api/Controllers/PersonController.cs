@@ -13,10 +13,11 @@ namespace DDDTest.Api.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
-        public PersonModel GetPersons(long id,[FromServices] GetPersonByIdService Services)
+        [HttpGet]
+        public async Task<PersonModel> GetPersons([FromHeader]long id,[FromServices] GetPersonByIdService Services)
         {
             var result = Services.Excute(id);
-            return result;
+            return await result;
         }
     }
 }

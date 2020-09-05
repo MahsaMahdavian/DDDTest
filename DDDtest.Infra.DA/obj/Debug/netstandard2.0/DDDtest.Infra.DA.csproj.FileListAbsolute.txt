@@ -1,0 +1,12 @@
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\bin\Debug\netstandard2.0\DDDtest.Infra.DA.deps.json
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\bin\Debug\netstandard2.0\DDDtest.Infra.DA.dll
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\obj\Debug\netstandard2.0\DDDtest.Infra.DA.csprojAssemblyReference.cache
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\obj\Debug\netstandard2.0\DDDtest.Infra.DA.AssemblyInfoInputs.cache
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\obj\Debug\netstandard2.0\DDDtest.Infra.DA.AssemblyInfo.cs
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\bin\Debug\netstandard2.0\DDDTest.Domain.dll
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\bin\Debug\netstandard2.0\DDDTest.Domain.pdb
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\obj\Debug\netstandard2.0\DDDtest.Infra.DA.csproj.CopyComplete
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\bin\Debug\netstandard2.0\DDDtest.Infra.DA.pdb
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\obj\Debug\netstandard2.0\DDDtest.Infra.DA.csproj.CoreCompileInputs.cache
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\obj\Debug\netstandard2.0\DDDtest.Infra.DA.dll
+C:\Users\Mahsa\source\repos\DDDTest\DDDtest.Infra.DA\obj\Debug\netstandard2.0\DDDtest.Infra.DA.pdb

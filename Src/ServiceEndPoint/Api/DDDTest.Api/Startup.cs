@@ -2,8 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DDDtest.Infra.DA;
+using DDDtest.Infra.DA.Repository;
+using DDDTest.Domain.Contract.Repository;
+using DDDTest.Services.Person;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +31,11 @@ namespace DDDTest.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<PeopleContext>();
+            services.AddScoped<IPeopleRepository,PeopleRepository>();
+            services.AddScoped<GetPersonByIdService>();
+
+            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +56,17 @@ namespace DDDTest.Api
             {
                 endpoints.MapControllers();
             });
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //      name: "areas",
+            //  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //});
         }
     }
 }

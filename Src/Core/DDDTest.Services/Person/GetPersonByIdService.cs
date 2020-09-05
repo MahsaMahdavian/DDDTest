@@ -4,21 +4,25 @@ using DDDTest.Domain.Person;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DDDTest.Services.Person
 {
     public class GetPersonByIdService : IGetPersonById
     {
-        private readonly IPersonRepository _repository;
+        private readonly IPeopleRepository _repository;
 
-        public GetPersonByIdService(IPersonRepository repository)
+        public GetPersonByIdService(IPeopleRepository repository)
         {
             _repository = repository;
         }
-        public PersonModel Excute(long id)
+        public async Task<PersonModel> Excute(long id)
         {
-            throw new NotImplementedException();
-            _repository.GetById(id);
+           
+           var person =await  _repository.GetByIdAsync(id);
+            return person;
         }
+
+       
     }
 }
