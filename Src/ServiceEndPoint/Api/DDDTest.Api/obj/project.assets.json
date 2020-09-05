@@ -5707,8 +5707,8 @@
     },
     "DDDtest.Infra.DA/1.0.0": {
       "type": "project",
-      "path": "../../../../DDDtest.Infra.DA/DDDtest.Infra.DA.csproj",
-      "msbuildProject": "../../../../DDDtest.Infra.DA/DDDtest.Infra.DA.csproj"
+      "path": "../../../Infrustructure/DataAccess/DDDtest.Infra.DA/DDDtest.Infra.DA.csproj",
+      "msbuildProject": "../../../Infrustructure/DataAccess/DDDtest.Infra.DA/DDDtest.Infra.DA.csproj"
     },
     "DDDTest.Services/1.0.0": {
       "type": "project",
@@ -5754,14 +5754,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\DDDtest.Infra.DA\\DDDtest.Infra.DA.csproj": {
-              "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\DDDtest.Infra.DA\\DDDtest.Infra.DA.csproj"
-            },
             "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Domain\\DDDTest.Domain.csproj": {
               "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Domain\\DDDTest.Domain.csproj"
             },
             "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Services\\DDDTest.Services.csproj": {
               "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Services\\DDDTest.Services.csproj"
+            },
+            "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Infrustructure\\DataAccess\\DDDtest.Infra.DA\\DDDtest.Infra.DA.csproj": {
+              "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Infrustructure\\DataAccess\\DDDtest.Infra.DA\\DDDtest.Infra.DA.csproj"
             }
           }
         }
