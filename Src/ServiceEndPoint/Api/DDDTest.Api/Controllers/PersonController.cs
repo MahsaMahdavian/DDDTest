@@ -14,10 +14,16 @@ namespace DDDTest.Api.Controllers
     public class PersonController : ControllerBase
     {
         [HttpGet]
-        public async Task<PersonModel> GetPersons([FromHeader]long id,[FromServices] GetPersonByIdService Services)
+        public async Task<PersonModel> GetPersons([FromHeader] int id, [FromServices] GetPersonByIdService Services)
         {
             var result = Services.Excute(id);
             return await result;
+        }
+        [HttpPost]
+        public async Task<string> addPerson([FromBody] PersonModel person,[FromServices] AddPersonModelService service)
+        {
+            await service.Excute(person);
+            return "با موفقیت انجام شد";
         }
     }
 }

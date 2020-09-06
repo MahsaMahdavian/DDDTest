@@ -34,6 +34,7 @@ namespace DDDTest.Api
             services.AddTransient<PeopleContext>();
             services.AddScoped<IPeopleRepository,PeopleRepository>();
             services.AddScoped<GetPersonByIdService>();
+            services.AddScoped<AddPersonModelService>();
 
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }

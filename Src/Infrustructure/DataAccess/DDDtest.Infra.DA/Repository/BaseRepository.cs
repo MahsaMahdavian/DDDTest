@@ -20,11 +20,15 @@ namespace DDDtest.Infra.DA.Repository
 
       
 
-        public async Task<TEntity> GetByIdAsync(long id, List<string> joins = null, bool ReadUnCommitted = true)
+        public async Task<TEntity> GetByIdAsync(int id, List<string> joins = null, bool ReadUnCommitted = true)
         {
             return await dbSet.FindAsync(id);
         }
 
-      
+        public async Task CreateAsync(TEntity entity)
+        {
+            await dbSet.AddAsync(entity);
+           await _Context.SaveChangesAsync();
+        }
     }
 }

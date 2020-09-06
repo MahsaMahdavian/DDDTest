@@ -1,28 +1,27 @@
 ﻿using DDDTest.Domain.Contract.Repository;
 using DDDTest.Domain.Contract.Service;
 using DDDTest.Domain.Person;
-using System;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DDDTest.Services.Person
 {
-    public class GetPersonByIdService : IGetPersonById
+    public class AddPersonModelService : IAddPersonModel
     {
         private readonly IPeopleRepository _repository;
-
-        public GetPersonByIdService(IPeopleRepository repository)
+        public AddPersonModelService(IPeopleRepository repository)
         {
             _repository = repository;
-        }
-        public async Task<PersonModel> Excute(int id)
-        {
-           
-           var person =await  _repository.GetByIdAsync(id);
-            return person;
+
         }
 
-       
+        public async Task Excute(PersonModel person)
+        {
+            await _repository.CreateAsync(person);
+          
+        }
+
+        
     }
 }
