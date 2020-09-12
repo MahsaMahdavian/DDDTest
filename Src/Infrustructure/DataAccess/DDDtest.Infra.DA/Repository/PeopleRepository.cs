@@ -1,5 +1,5 @@
-﻿using DDDTest.Domain.Contract.Repository;
-using DDDTest.Domain.Person;
+﻿using DDDTest.Domain.People.Contract.Repository;
+using DDDTest.Domain.People.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DDDtest.Infra.DA.Repository
 {
-    public class PeopleRepository : BaseRepository<PersonModel, PeopleContext>, IPeopleRepository
+    public class PeopleRepository : BaseRepository<Person>, IPeopleRepository
     {
-        public PeopleRepository(PeopleContext Context) : base(Context)
+        public PeopleRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
     }

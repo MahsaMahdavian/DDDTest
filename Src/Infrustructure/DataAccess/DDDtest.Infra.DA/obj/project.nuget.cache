@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0U3gXHzt0n8iuGvn3wm0Jii6bdjOpiUsKzUSwp9NB3rBCnX6B7gJbVUELwibMwxz9iO8GjDxJ9H8xzP/PmKMrw==",
+  "dgSpecHash": "uIXFlwOwHIU+zPR8U0vAsTrEYbPwIcpQi6vlJJUrBSQu2VETVY2mnjkgOX7vT2VXktilxO5tNJjgA8wHq5Svjw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Infrustructure\\DataAccess\\DDDtest.Infra.DA\\DDDtest.Infra.DA.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mahsa\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",

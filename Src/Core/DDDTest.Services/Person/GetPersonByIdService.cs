@@ -1,6 +1,6 @@
-﻿using DDDTest.Domain.Contract.Repository;
-using DDDTest.Domain.Contract.Service;
-using DDDTest.Domain.Person;
+﻿using DDDTest.Domain.People.Contract.Repository;
+using DDDTest.Domain.People.Contract.Service;
+using DDDTest.Domain.People;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +16,7 @@ namespace DDDTest.Services.Person
         {
             _repository = repository;
         }
-        public async Task<PersonModel> Excute(int id)
+        public async Task<Domain.People.Entities.Person> Excute(int id)
         {
            
            var person =await  _repository.GetByIdAsync(id);

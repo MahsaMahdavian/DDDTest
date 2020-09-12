@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DDDtest.Infra.DA;
 using DDDtest.Infra.DA.Repository;
-using DDDTest.Domain.Contract.Repository;
+using DDDTest.Domain.People.Contract.Repository;
+using DDDTest.Domain.People.Contract.Service;
 using DDDTest.Services.Person;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,11 +25,11 @@ namespace DDDTest.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddTransient<PeopleContext>();
-            services.AddScoped<IPeopleRepository,PeopleRepository>();
-            services.AddScoped<GetPersonByIdService>();
-            services.AddScoped<AddPersonModelService>();
+            //services.AddControllers();
+            services.AddDbContext<PeopleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
+           // services.AddScoped<IBaseRepository,BaseRepository>();
+            services.AddTransient<IGetPersonById, GetPersonByIdService>();
+            services.AddTransient<IAddPerson, AddPersonModelService>();
 
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
@@ -58,16 +53,6 @@ namespace DDDTest.Api
                 endpoints.MapControllers();
             });
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //      name: "areas",
-            //  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //});
         }
     }
 }
