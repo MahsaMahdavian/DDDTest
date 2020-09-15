@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace DDDTest.Services.Person
 {
-    public class AddPersonModelService : IAddPerson
+    public class AddPersonService : IAddPerson
     {
         private readonly IPeopleRepository _repository;
-        public AddPersonModelService(IPeopleRepository repository)
+        public AddPersonService(IPeopleRepository repository)
         {
             _repository = repository;
 
@@ -19,6 +19,8 @@ namespace DDDTest.Services.Person
         public async Task Excute(Domain.People.Entities.Person person)
         {
             await _repository.CreateAsync(person);
+            _repository.Save();
+
           
         }
 

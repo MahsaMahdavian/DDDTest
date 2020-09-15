@@ -29,7 +29,7 @@ namespace DDDTest.Api
             services.AddDbContext<PeopleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
            // services.AddScoped<IBaseRepository,BaseRepository>();
             services.AddTransient<IGetPersonById, GetPersonByIdService>();
-            services.AddTransient<IAddPerson, AddPersonModelService>();
+            services.AddTransient<IAddPerson, AddPersonService>();
 
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }

@@ -10,26 +10,18 @@ using System.Threading.Tasks;
 
 namespace DDDtest.Infra.DA.Repository
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class 
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : class
     {
 
-        public readonly UnitOfWork UnitOfWork;
+        // public readonly UnitOfWork UnitOfWork;
+        private PeopleContext _context;
         private readonly DbSet<TEntity> dbSet;
-        public BaseRepository(IUnitOfWork _unitOfWork)
+        public BaseRepository(PeopleContext Context)
         {
-            var unitOfWork = _unitOfWork as UnitOfWork;
+            Context = _context;
+            dbSet = _context.Set<TEntity>();
 
-            if (unitOfWork == null)
-            {
-                throw new ArgumentOutOfRangeException("Must be of type EntityFrameworkUnitOfWork");
-            }
-
-            dbSet =unitOfWork.GetDbSet<TEntity>();
-          
         }
-
-
-
         public async Task<TEntity> GetByIdAsync(int id)
         {
             return await dbSet.FindAsync(id);
@@ -37,30 +29,46 @@ namespace DDDtest.Infra.DA.Repository
 
         public async Task CreateAsync(TEntity entity)
         {
-            await  dbSet.AddAsync(entity);
-            UnitOfWork.Commit();
+            await dbSet.AddAsync(entity);
+
         }
 
-        public void Update(TEntity entity)
+        public async Task Update(TEntity entity)
         {
             dbSet.Update(entity);
-            UnitOfWork.Commit();
+
         }
 
-        public void Delete(TEntity entity)
+        public async Task Delete(TEntity entity)
         {
             dbSet.Remove(entity);
-            UnitOfWork.Commit();
+
         }
 
-        public IEnumerable<TEntity> list()
+        public async Task<IEnumerable<TEntity>> FindByConditionAsync(Expression<Func<TEntity, bool>> filter = null)
         {
-            return dbSet.ToList();
+            IQueryable<TEntity> query = _context.Set<TEntity>();
+          
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+         
+            return await query.ToListAsync();
         }
 
-        public Task<IEnumerable<TEntity>> FindByConditionAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
+        public void Dispose()
         {
-            throw new NotImplementedException();
+            _context.Dispose();
         }
+
+        public void Save()
+        {
+            _context.SaveChanges();
+        }
+
+      
     }
 }
