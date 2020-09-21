@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -11,6 +12,7 @@ namespace DDDTest.Domain.People.Entities
         {
 
         }
+        [JsonConstructor]
         public Person(int id,string firstName,string lastName)
         {
             Id = id;

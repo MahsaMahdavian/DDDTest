@@ -5,6 +5,7 @@ using DDDTest.Domain.People.Contract.Service;
 using DDDTest.Services.Person;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,13 +26,17 @@ namespace DDDTest.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddControllers();
+            services.AddControllers();
             services.AddDbContext<PeopleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
-           // services.AddScoped<IBaseRepository,BaseRepository>();
+            services.AddScoped(typeof(IPeopleRepository), typeof(PeopleRepository));
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));                     
             services.AddTransient<IGetPersonById, GetPersonByIdService>();
             services.AddTransient<IAddPerson, AddPersonService>();
-
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IDeletePerson, RemovePersonService>();
+            services.AddTransient<IUpdatePerson, UpdatePersonService>();
+            services.AddTransient<ISearchPerson, SearchPersonService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

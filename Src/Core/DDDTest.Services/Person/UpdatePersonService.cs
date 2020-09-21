@@ -13,13 +13,7 @@ namespace DDDTest.Services.Person
         {
             _repository = repository;
         }
-        public async Task Excute(Domain.People.Entities.Person person)
-        {
-            await _repository.Update(person);
-            _repository.Save();
-           
-        }
-
+  
         public async Task Excute(int id)
         {
            var person= await _repository.GetByIdAsync(id);

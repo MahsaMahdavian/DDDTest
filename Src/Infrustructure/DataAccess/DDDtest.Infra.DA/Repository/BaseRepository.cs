@@ -13,35 +13,35 @@ namespace DDDtest.Infra.DA.Repository
     public class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : class
     {
 
-        // public readonly UnitOfWork UnitOfWork;
+      
         private PeopleContext _context;
-        private readonly DbSet<TEntity> dbSet;
+        private readonly DbSet<TEntity> _dbSet;
         public BaseRepository(PeopleContext Context)
         {
-            Context = _context;
-            dbSet = _context.Set<TEntity>();
+            _context = Context;
+            _dbSet = _context.Set<TEntity>();
 
         }
         public async Task<TEntity> GetByIdAsync(int id)
         {
-            return await dbSet.FindAsync(id);
+            return await _dbSet.FindAsync(id);
         }
 
         public async Task CreateAsync(TEntity entity)
         {
-            await dbSet.AddAsync(entity);
+            await _dbSet.AddAsync(entity);
 
         }
 
         public async Task Update(TEntity entity)
         {
-            dbSet.Update(entity);
+            _dbSet.Update(entity);
 
         }
 
         public async Task Delete(TEntity entity)
         {
-            dbSet.Remove(entity);
+            _dbSet.Remove(entity);
 
         }
 

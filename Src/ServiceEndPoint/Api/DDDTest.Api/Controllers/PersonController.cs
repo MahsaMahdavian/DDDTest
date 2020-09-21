@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using DDDTest.Domain.People.Contract.Service;
 using DDDTest.Domain.People.Entities;
 using DDDTest.Services.Person;
 using Microsoft.AspNetCore.Mvc;
@@ -12,32 +13,40 @@ namespace DDDTest.Api.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
+     
         [HttpGet]
-        public async Task<Person> GetPersons([FromHeader] int id, [FromServices] GetPersonByIdService Services)
+        public async Task<Person> GetPersons([FromHeader] int id, [FromServices] IGetPersonById Services)
         {
             var result = Services.Excute(id);
             return await result;
         }
-        [HttpPost]
-        public async Task<string> AddPerson([FromBody] Person person,[FromServices] AddPersonService service)
+        [HttpPost("Add")]
+        public async Task<string> AddPerson([FromBody] Person person,[FromServices] IAddPerson service)
         {
-            await service.Excute(person);
-            return "با موفقیت انجام شد";
+            if (!string.IsNullOrEmpty(person.FirstName))
+            {
+             await service.Excute(person);
+             return "با موفقیت انجام شد";
+            }
+            else
+                return "خطای خالی بودن اسم شخص";
+            
+         
         }
 
-        [HttpPost]
-        public async Task<IEnumerable<Person>> SearchPerson([FromBody] Expression<Func<Person, bool>> filter ,[FromServices] SearchPersonService service)
+        [HttpGet("SearchPerson")]
+        public async Task<IEnumerable<Person>> SearchPerson([FromBody] Expression<Func<Person, bool>> filter ,[FromServices] ISearchPerson service)
         {
              return await service.Excute(filter);
         }
-
-        public async Task UpdatePerson([FromBody] int id, [FromServices] UpdatePersonService service)
+        [HttpPost]
+        public async Task UpdatePerson([FromBody] int id, [FromServices] IUpdatePerson service)
         {
             await service.Excute(id);
            
         }
-
-        public async Task DeletePerson([FromBody] int id, [FromServices] RemovePersonService service)
+        [HttpPost]
+        public async Task DeletePerson([FromBody] int id, [FromServices] IDeletePerson service)
         {
             await service.Excute(id);
 

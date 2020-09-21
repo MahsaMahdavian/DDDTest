@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DDDTest.Domain.People.Contract.Repository
 {
-    public interface IBaseRepository<TEntity> where TEntity : class
+    public interface IBaseRepository<TEntity>
     {
         Task<TEntity> GetByIdAsync(int id);
         Task CreateAsync(TEntity entity);

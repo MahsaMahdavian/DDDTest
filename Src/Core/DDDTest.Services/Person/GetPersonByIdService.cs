@@ -19,8 +19,8 @@ namespace DDDTest.Services.Person
         public async Task<Domain.People.Entities.Person> Excute(int id)
         {
            
-           var person =await  _repository.GetByIdAsync(id);
-            return person;
+          return await  _repository.GetByIdAsync(id);
+            
         }
 
        

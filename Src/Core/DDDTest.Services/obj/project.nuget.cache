@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bS91vvpLuSdoziCWOcRfxHNneZdfGzE0JG6zuoprHggdWoxiwTmCrQkYNIEUWcG3drWv9pAQXzJv15m0bjFo0Q==",
+  "dgSpecHash": "Vs1m2WkwXhSr5YCpfPyBMDmftSMVfNOcTWIBucM5ux6Zdg+EaaE8/sQrqQvgIPzBndi+wj6MFWJotSeY51MOoQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Services\\DDDTest.Services.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Mahsa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",

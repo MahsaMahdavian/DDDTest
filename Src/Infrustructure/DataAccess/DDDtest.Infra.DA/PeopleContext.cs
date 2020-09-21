@@ -10,10 +10,9 @@ namespace DDDtest.Infra.DA
 {
     public class PeopleContext:DbContext
     {
-        
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public PeopleContext(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer(@"Server=(local);Database=TestDB;Trusted_Connection=True");
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
