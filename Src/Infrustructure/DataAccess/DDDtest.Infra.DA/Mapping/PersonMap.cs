@@ -12,6 +12,7 @@ namespace DDDtest.Infra.DA.Mapping
     {
         public void Configure(EntityTypeBuilder<Person> builder)
         {
+            builder.Property(c => c.Id).HasColumnName("Id");
             builder.Property(p => p.FirstName).HasMaxLength(255);
             builder.Property(p => p.LastName).HasMaxLength(255);
         }

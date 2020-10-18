@@ -30,11 +30,6 @@ namespace DDDTest.Api
             services.AddDbContext<PeopleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
             services.AddScoped(typeof(IPeopleRepository), typeof(PeopleRepository));
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));                     
-            services.AddTransient<IGetPersonById, GetPersonByIdService>();
-            services.AddTransient<IAddPerson, AddPersonService>();
-            services.AddTransient<IDeletePerson, RemovePersonService>();
-            services.AddTransient<IUpdatePerson, UpdatePersonService>();
-            services.AddTransient<ISearchPerson, SearchPersonService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc();
         }

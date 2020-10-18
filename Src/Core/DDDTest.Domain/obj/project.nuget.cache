@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FCXrKDbt/30tl62CKkghtPCvun8yglbI7t55+b1/twLsODnrypDCkp4+JHmmt7sQNttDcbq29TVV/4GZWxAjyw==",
+  "dgSpecHash": "2O5mReEnYxIJ5oRJl6IKDkL5vBe5SH8xrXsq7TwsFRlUzGjlVITTH/svqRhGGBFYwhq6xuwCSVSLgO3QilDsWg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Domain\\DDDTest.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mahsa\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\Mahsa\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
@@ -12,6 +14,7 @@
     "C:\\Users\\Mahsa\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Mahsa\\.nuget\\packages\\netdevpack\\1.1.0\\netdevpack.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Mahsa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",

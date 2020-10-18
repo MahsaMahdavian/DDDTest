@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using DDDTest.Domain.People.Contract.Service;
 using DDDTest.Domain.People.Entities;
-using DDDTest.Services.Person;
+using DDDTest.Services.Interfaces;
+using DDDTest.Services.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDDTest.Api.Controllers
@@ -13,13 +13,26 @@ namespace DDDTest.Api.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
-     
-        [HttpGet]
-        public async Task<Person> GetPersons([FromHeader] int id, [FromServices] IGetPersonById Services)
+        private readonly IPersonAppService _personAppService;
+
+
+        public PersonController(IPersonAppService personAppService)
         {
-            var result = Services.Excute(id);
-            return await result;
+            _personAppService = personAppService;
         }
+
+        [HttpGet]
+        public async Task<PersonViewModel> Get( Guid id)
+        {
+            return await _personAppService.GetById(id);
+        }
+
+        [HttpGet]
+        public async Task<IEnumerable< PersonViewModel>> GetAll([FromBody] Expression<Func<Person, bool>> filter)
+        {
+            return await _personAppService.GetAll(filter);
+        }
+
         [HttpPost("Add")]
         public async Task<string> AddPerson([FromBody] Person person,[FromServices] IAddPerson service)
         {

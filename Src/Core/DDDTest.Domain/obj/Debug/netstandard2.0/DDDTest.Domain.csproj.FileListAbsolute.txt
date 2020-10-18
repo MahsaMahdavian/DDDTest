@@ -1,9 +1,9 @@
 C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\bin\Debug\netstandard2.0\DDDTest.Domain.deps.json
 C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\bin\Debug\netstandard2.0\DDDTest.Domain.dll
 C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\bin\Debug\netstandard2.0\DDDTest.Domain.pdb
-C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.csprojAssemblyReference.cache
 C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.AssemblyInfoInputs.cache
 C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.AssemblyInfo.cs
+C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.dll
 C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.pdb
-C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mahsa\source\repos\DDDTest\Src\Core\DDDTest.Domain\obj\Debug\netstandard2.0\DDDTest.Domain.csprojAssemblyReference.cache

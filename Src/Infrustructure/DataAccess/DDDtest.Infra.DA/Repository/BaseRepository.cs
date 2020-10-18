@@ -1,6 +1,7 @@
 ﻿using DDDTest.Domain.People.Contract.Repository;
 using DDDTest.Domain.People.Entities;
 using Microsoft.EntityFrameworkCore;
+using NetDevPack.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DDDtest.Infra.DA.Repository
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : class
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
 
       
@@ -22,24 +23,25 @@ namespace DDDtest.Infra.DA.Repository
             _dbSet = _context.Set<TEntity>();
 
         }
-        public async Task<TEntity> GetByIdAsync(int id)
+        public IUnitOfWork UnitOfWork => _context;
+        public async Task<TEntity> GetByIdAsync(Guid id)
         {
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task CreateAsync(TEntity entity)
+        public void Create(TEntity entity)
         {
-            await _dbSet.AddAsync(entity);
+            _dbSet.AddAsync(entity);
 
         }
 
-        public async Task Update(TEntity entity)
+        public void Update(TEntity entity)
         {
             _dbSet.Update(entity);
 
         }
 
-        public async Task Delete(TEntity entity)
+        public void Delete(TEntity entity)
         {
             _dbSet.Remove(entity);
 
@@ -64,10 +66,10 @@ namespace DDDtest.Infra.DA.Repository
             _context.Dispose();
         }
 
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
+        //public void Save()
+        //{
+        //    _context.SaveChanges();
+        //}
 
       
     }
