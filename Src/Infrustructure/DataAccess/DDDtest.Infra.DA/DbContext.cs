@@ -13,10 +13,10 @@ using System.Threading.Tasks;
 
 namespace DDDtest.Infra.DA
 {
-    public class PeopleContext:DbContext, IUnitOfWork
+    public class DbContext: Microsoft.EntityFrameworkCore.DbContext, IUnitOfWork
     {
         private readonly IMediatorHandler _mediatorHandler;
-        public PeopleContext(DbContextOptions<PeopleContext> options, IMediatorHandler mediatorHandler) : base(options)
+        public DbContext(DbContextOptions<DbContext> options, IMediatorHandler mediatorHandler) : base(options)
         {
             _mediatorHandler = mediatorHandler;
         }
@@ -43,7 +43,7 @@ namespace DDDtest.Infra.DA
 
     public static class MediatorExtension
     {
-        public static async Task PublishDomainEvents<T>(this IMediatorHandler mediator, T ctx) where T : DbContext
+        public static async Task PublishDomainEvents<T>(this IMediatorHandler mediator, T ctx) where T : Microsoft.EntityFrameworkCore.DbContext
         {
             var domainEntities = ctx.ChangeTracker
                 .Entries<Entity>()

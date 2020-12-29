@@ -6093,6 +6093,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Domain\\DDDTest.Domain.csproj": {
               "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Domain\\DDDTest.Domain.csproj"
@@ -6114,6 +6115,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Abstractions": {
             "target": "Package",
@@ -6144,7 +6146,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

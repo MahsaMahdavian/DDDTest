@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DDDtest.Infra.DA.Migrations
 {
-    [DbContext(typeof(PeopleContext))]
+    [DbContext(typeof(DbContext))]
     [Migration("20200905085922_InitialCreate")]
     partial class InitialCreate
     {

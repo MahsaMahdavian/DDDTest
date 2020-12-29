@@ -13,7 +13,7 @@ namespace DDDTest.Domain.People.Entities
         {
 
         }
-        [JsonConstructor]
+       // [JsonConstructor]
         public Person(Guid id, string firstName,string lastName)
         {
             Id = id;

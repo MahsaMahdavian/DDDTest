@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DDDtest.Infra.DA.Migrations
 {
-    [DbContext(typeof(PeopleContext))]
+    [DbContext(typeof(DbContext))]
     partial class PeopleContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

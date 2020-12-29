@@ -1,8 +1,6 @@
 using DDDtest.Infra.DA;
 using DDDtest.Infra.DA.Repository;
 using DDDTest.Domain.People.Contract.Repository;
-using DDDTest.Domain.People.Contract.Service;
-using DDDTest.Services.Person;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,7 +25,7 @@ namespace DDDTest.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PeopleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
+            services.AddDbContext<DDDtest.Infra.DA.DbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
             services.AddScoped(typeof(IPeopleRepository), typeof(PeopleRepository));
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));                     
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

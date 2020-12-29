@@ -11,7 +11,7 @@ namespace DDDTest.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PersonController : ControllerBase
+    public class PersonController : ApiController
     {
         private readonly IPersonAppService _personAppService;
 
@@ -34,16 +34,10 @@ namespace DDDTest.Api.Controllers
         }
 
         [HttpPost("Add")]
-        public async Task<string> AddPerson([FromBody] Person person,[FromServices] IAddPerson service)
+        public async Task<string> AddPerson([FromBody] PersonViewModel personViewModel)
         {
-            if (!string.IsNullOrEmpty(person.FirstName))
-            {
-             await service.Excute(person);
-             return "با موفقیت انجام شد";
-            }
-            else
-                return "خطای خالی بودن اسم شخص";
-            
+            if(ModelState.IsValid)
+
          
         }
 

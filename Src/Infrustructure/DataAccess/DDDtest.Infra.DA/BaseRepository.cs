@@ -15,9 +15,9 @@ namespace DDDtest.Infra.DA.Repository
     {
 
       
-        private PeopleContext _context;
+        private DbContext _context;
         private readonly DbSet<TEntity> _dbSet;
-        public BaseRepository(PeopleContext Context)
+        public BaseRepository(DbContext Context)
         {
             _context = Context;
             _dbSet = _context.Set<TEntity>();

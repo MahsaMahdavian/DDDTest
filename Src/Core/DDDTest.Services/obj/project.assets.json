@@ -1239,6 +1239,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {
             "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Domain\\DDDTest.Domain.csproj": {
               "projectPath": "C:\\Users\\Mahsa\\source\\repos\\DDDTest\\Src\\Core\\DDDTest.Domain\\DDDTest.Domain.csproj"
@@ -1254,6 +1255,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
@@ -1276,7 +1278,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

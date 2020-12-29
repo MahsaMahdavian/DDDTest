@@ -9,7 +9,7 @@ namespace DDDtest.Infra.DA.Repository
 {
     public class PeopleRepository : BaseRepository<Person>, IPeopleRepository
     {
-        public PeopleRepository(PeopleContext context ) : base(context)
+        public PeopleRepository(DbContext context ) : base(context)
         {
         }
     }
