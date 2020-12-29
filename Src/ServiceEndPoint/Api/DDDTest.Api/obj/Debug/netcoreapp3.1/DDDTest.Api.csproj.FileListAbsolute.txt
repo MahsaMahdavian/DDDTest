@@ -25,7 +25,6 @@ C:\Users\Mahsa\source\repos\DDDTest\DDDTest.Api\obj\Debug\netcoreapp3.1\DDDTest.
 C:\Users\Mahsa\source\repos\DDDTest\DDDTest.Api\obj\Debug\netcoreapp3.1\DDDTest.Api.genruntimeconfig.cache
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\bin\Debug\netcoreapp3.1\DDDTest.Api.exe
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\bin\Debug\netcoreapp3.1\DDDTest.Api.deps.json
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\bin\Debug\netcoreapp3.1\DDDTest.Api.runtimeconfig.json
@@ -99,3 +98,5 @@ C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\obj\Debu
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\obj\Debug\netcoreapp3.1\DDDTest.Api.dll
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\obj\Debug\netcoreapp3.1\DDDTest.Api.pdb
 C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\obj\Debug\netcoreapp3.1\DDDTest.Api.genruntimeconfig.cache
+C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Mahsa\source\repos\DDDTest\Src\ServiceEndPoint\Api\DDDTest.Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\DDDTest.Api.styles.css

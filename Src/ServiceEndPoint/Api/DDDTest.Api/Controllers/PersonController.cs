@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DDDTest.Domain.People.Entities;
 using DDDTest.Services.Interfaces;
 using DDDTest.Services.ViewModels;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDDTest.Api.Controllers
@@ -27,35 +28,33 @@ namespace DDDTest.Api.Controllers
             return await _personAppService.GetById(id);
         }
 
-        [HttpGet]
+        // [HttpGet]
+        [HttpGet("SearchPerson")]
         public async Task<IEnumerable< PersonViewModel>> GetAll([FromBody] Expression<Func<Person, bool>> filter)
         {
             return await _personAppService.GetAll(filter);
         }
 
         [HttpPost("Add")]
-        public async Task<string> AddPerson([FromBody] PersonViewModel personViewModel)
+        public async Task<IActionResult> AddPerson([FromBody] PersonViewModel personViewModel)
         {
-            if(ModelState.IsValid)
+            return !ModelState.IsValid ? PersonResponse(ModelState) : PersonResponse(await _personAppService.Register(personViewModel));
 
-         
         }
 
-        [HttpGet("SearchPerson")]
-        public async Task<IEnumerable<Person>> SearchPerson([FromBody] Expression<Func<Person, bool>> filter ,[FromServices] ISearchPerson service)
-        {
-             return await service.Excute(filter);
-        }
+       
+  
         [HttpPost]
-        public async Task UpdatePerson([FromBody] int id, [FromServices] IUpdatePerson service)
+        public async Task<IActionResult> UpdatePerson([FromBody] PersonViewModel personViewModel)
         {
-            await service.Excute(id);
+
+            return !ModelState.IsValid ? PersonResponse(ModelState) : PersonResponse(await _personAppService.Update(personViewModel));
            
         }
         [HttpPost]
-        public async Task DeletePerson([FromBody] int id, [FromServices] IDeletePerson service)
+        public async Task<IActionResult> DeletePerson([FromBody] Guid id)
         {
-            await service.Excute(id);
+            return PersonResponse(await _personAppService.Remove(id));
 
         }
     }
